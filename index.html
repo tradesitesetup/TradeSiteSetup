@@ -1,93 +1,110 @@
-/* Reset & Base */
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #f8f9fa; /* Explicit fallback color */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trade Site Setup</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
 
-a { color: #007bff; text-decoration: none; }
-a:hover { text-decoration: underline; }
+<body>
 
-.required { color: #dc3545; font-size: 0.9em; }
+<header>
+  <nav>
+    <div class="logo">TradeSiteSetup</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-/* Header & Nav */
-header {
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+<section class="hero">
+  <div class="hero-content">
+    <h1>Professional Websites & Custom Merch for Small Businesses</h1>
+    <p>We help local businesses look legit online and sell branded products without hassle.</p>
+    <a href="#products" class="cta">View Products</a>
+  </div>
+</section>
 
-nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<section id="about">
+  <h2>Why Work With Us</h2>
+  <div class="benefits">
+    <ul>
+      <li>Fast turnaround</li>
+      <li>No long-term contracts</li>
+      <li>Designed for real businesses</li>
+      <li>Mobile-first & SEO-ready</li>
+    </ul>
+  </div>
+</section>
 
-.logo { font-size: 1.6rem; font-weight: bold; color: #007bff; }
+<section id="products">
+  <h2>Popular Products</h2>
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-}
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/600x400" alt="Custom T-Shirts">
+      <h3>Custom T-Shirts</h3>
+      <p>High-quality branded shirts for your business.</p>
+      <button class="customize-btn" data-product="Custom T-Shirts">Customize</button>
+    </div>
 
-nav a {
-  font-weight: 500;
-  padding: 0.5rem 0;
-  transition: color 0.2s;
-}
+    <div class="product-card">
+      <img src="https://via.placeholder.com/600x400" alt="Custom Mugs">
+      <h3>Custom Mugs</h3>
+      <p>Perfect for coffee shops and promotions.</p>
+      <button class="customize-btn" data-product="Custom Mugs">Customize</button>
+    </div>
+  </div>
+</section>
 
-nav a:hover { color: #0056b3; }
+<section id="contact">
+  <h2>Contact Us</h2>
 
-/* Hero */
-.hero {
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-  color: white;
-  text-align: center;
-  padding: 8rem 1.5rem 6rem;
-}
+  <form id="contact-form">
+    <div>
+      <label>Name <span class="required">*</span></label>
+      <input type="text" required />
+    </div>
 
-.hero-content { max-width: 900px; margin: 0 auto; }
+    <div>
+      <label>Email <span class="required">*</span></label>
+      <input type="email" required />
+    </div>
 
-.hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+    <div>
+      <label>Message <span class="required">*</span></label>
+      <textarea rows="5" required></textarea>
+    </div>
 
-.hero p { font-size: 1.25rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
-/* CTA Button */
-.cta, button[type="submit"], .customize-btn {
-  background: #fff;
-  color: #007bff;
-  border: none;
-  padding: 0.9rem 1.8rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
+<footer>
+  <p>© 2026 Trade Site Setup. All rights reserved.</p>
+</footer>
 
-.cta:hover, button[type="submit"]:hover, .customize-btn:hover {
-  background: #f0f8ff;
-  transform: translateY(-2px);
-}
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <h3 id="modal-product-name"></h3>
 
-/* Sections */
-section {
-  padding: 5rem 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    <form id="order-form">
+      <label>Email <span class="required">*</span></label>
+      <input type="email" required />
 
-h2 { font-size: 2.4rem; text-align: center; margin-bottom: 2rem; color: #222; }
+      <label>Details</label>
+      <textarea rows="4"></textarea>
 
-/* About & Benefits */
-.benefits { margin: 2rem auto; max-width: 700px; }
-.benefits ul { list-style: none; margin-top: 1rem; }
-.benefits li { margin: 0
+      <button type="submit">Submit Order Request</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
