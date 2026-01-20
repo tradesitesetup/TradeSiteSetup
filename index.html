@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Trade Site Setup | Websites & Merch for Local Businesses</title>
-  <meta name="description" content="We build modern websites and branded merchandise for local businesses — fast, affordable, and done-for-you.">
-
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade Site Setup</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="cart.js"></script>
 </head>
 
 <body>
@@ -14,116 +13,79 @@
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-logo">TradeSiteSetup</div>
-  <a href="#contact" class="nav-cta">Free Quote</a>
+
+  <div class="nav-links">
+    <a href="#services">About Us</a>
+    <a href="#packages">Packages</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Email</a>
+    <button class="cart-btn" onclick="toggleCart()">🛒</button>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>Websites & Merch That Make Your Business Look Legit</h1>
-    <p>
-      We help local businesses attract more customers with clean websites
-      and branded merchandise — launched in days, not months.
-    </p>
-    <a href="#contact" class="btn-primary">Get a Free Quote</a>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="trust">
-  <h2>Trusted by Local Businesses</h2>
-  <div class="trust-grid">
-    <div class="trust-card">⭐ “Super fast and professional.”</div>
-    <div class="trust-card">⭐ “Exactly what our shop needed.”</div>
-    <div class="trust-card">⭐ “Affordable and easy to work with.”</div>
-  </div>
+  <h1>Websites & Merch Built for Local Businesses</h1>
+  <p>Professional online presence and branded products — fast, affordable, and done-for-you.</p>
 </section>
 
 <!-- SERVICES -->
-<section class="services">
+<section id="services">
   <h2>What We Offer</h2>
 
-  <div class="services-grid">
-    <div class="service-card">
-      <h3>Business Websites</h3>
-      <p>Mobile-friendly, modern websites built to convert visitors into customers.</p>
-    </div>
-
-    <div class="service-card">
-      <h3>Custom Merchandise</h3>
-      <p>Shirts, mugs, hats, and more — branded with your logo and ready to sell.</p>
-    </div>
-
-    <div class="service-card">
-      <h3>Done-For-You Setup</h3>
-      <p>No tech skills needed. We handle everything start to finish.</p>
-    </div>
+  <div class="card-grid">
+    <div class="card">Modern Business Websites</div>
+    <div class="card">Custom Branded Merchandise</div>
+    <div class="card">Done-For-You Setup</div>
   </div>
 </section>
 
-<!-- PRODUCTS / CHARTS -->
-<section class="products">
+<!-- PACKAGES -->
+<section id="packages">
   <h2>Popular Packages</h2>
 
-  <div class="products-wrapper">
-    <div class="product-card">
+  <div class="card-grid">
+    <div class="card">
       <h3>Starter Website</h3>
       <p class="price">$499</p>
-      <ul>
-        <li>1-page website</li>
-        <li>Mobile optimized</li>
-        <li>Fast launch</li>
-      </ul>
+      <p>Clean, mobile-friendly website built to convert customers.</p>
     </div>
 
-    <div class="product-card featured">
-      <h3>Website + Merch</h3>
-      <p class="price">$799</p>
-      <ul>
-        <li>Website included</li>
-        <li>Custom merch setup</li>
-        <li>Best value</li>
-      </ul>
-    </div>
-
-    <div class="product-card">
-      <h3>Merch Only</h3>
-      <p class="price">$299</p>
-      <ul>
-        <li>Logo merch</li>
-        <li>Bulk pricing</li>
-        <li>Fast turnaround</li>
-      </ul>
+    <div class="card clickable" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+      <h3>Custom Merch</h3>
+      <p class="price">20 Product Minimum</p>
+      <p>Pricing varies by product. Shirts, hats, mugs, and more.</p>
+      <span class="link">View Products →</span>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about">
-  <h2>Who We Are</h2>
-  <p>
-    Trade Site Setup helps small businesses look professional online
-    without expensive agencies or long contracts.
-    We focus on speed, clarity, and results.
-  </p>
+<!-- PRODUCTS -->
+<section id="products">
+  <h2>Products</h2>
+
+  <div class="product-grid">
+    <button onclick="addToCart('Custom Shirts', 25)">Custom Shirts</button>
+    <button onclick="addToCart('Hats', 22)">Hats</button>
+    <button onclick="addToCart('Mugs', 18)">Mugs</button>
+    <button onclick="addToCart('Glasses', 20)">Glasses</button>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Get Your Free Quote</h2>
-  <p>Tell us what you need — we’ll reply within 24 hours.</p>
-
-  <form>
-    <input type="text" placeholder="Business Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <textarea placeholder="What are you looking for?" required></textarea>
-    <button type="submit" class="btn-primary">Submit</button>
-  </form>
+<section id="contact">
+  <h2>Email Us</h2>
+  <p>We reply within 24 hours.</p>
+  <input type="email" placeholder="Your email">
 </section>
 
-<footer>
-  © 2026 Trade Site Setup • Madison, AL
-</footer>
+<!-- CART -->
+<div id="cart" class="cart hidden">
+  <h3>Your Cart</h3>
+  <div id="cart-items"></div>
+  <p id="cart-total"></p>
+  <button class="checkout-btn">Checkout</button>
+</div>
 
 </body>
 </html>
