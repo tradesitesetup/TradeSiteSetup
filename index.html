@@ -3,174 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Trade Site Setup - Custom branded products for businesses using Printify. Logos on apparel, mugs, hats and more."/>
-  <title>Trade Site Setup | Custom Branded Products for Your Business</title>
-  
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!-- Root-relative paths -->
-  <link rel="stylesheet" href="/styles.css"/>
-  <script defer src="/script.js"></script>
-  
-  <!-- Favicon placeholder -->
-  <link rel="icon" href="https://via.placeholder.com/32?text=T" type="image/png">
+  <title>Trade Site Setup</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <div class="logo">Trade Site Setup</div>
-      <button class="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Unlock Your Brand's Potential with Custom Merch</h1>
-        <p>Elevate your business presence with premium, logo-branded products. From employee uniforms to promotional giveaways, we make branding effortless and impactful—powered by Printify's top-tier quality.</p>
-        <a href="#products" class="cta">Discover Products Now</a>
-      </div>
-    </section>
+<header>
+  <nav>
+    <div class="logo">TradeSiteSetup</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>At Trade Site Setup, we bridge the gap between digital and physical branding. Starting from website solutions, we've expanded to deliver custom merchandise that helps businesses like yours thrive in Madison, AL and beyond.</p>
-      
-      <div class="benefits">
-        <h3>Why Partner with Us?</h3>
-        <ul>
-          <li><i class="fas fa-check-circle"></i> Seamless logo integration for professional results</li>
-          <li><i class="fas fa-dollar-sign"></i> Business-friendly pricing with bulk discounts</li>
-          <li><i class="fas fa-rocket"></i> Fast production and nationwide shipping</li>
-          <li><i class="fas fa-handshake"></i> Dedicated support—we outreach to shops for custom needs</li>
-        </ul>
-      </div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Professional Websites & Custom Merch for Small Businesses</h1>
+    <p>We help local businesses look legit online and sell branded products without hassle.</p>
+    <a href="#products" class="cta">View Products</a>
+  </div>
+</section>
 
-      <div class="testimonials">
-        <blockquote>
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <p>“Transformed our shop's merch game—high quality at unbeatable prices!”</p>
-          <cite>— Local Retail Owner</cite>
-        </blockquote>
-        <blockquote>
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <p>“Easy, fast, and exactly what our team needed for events.”</p>
-          <cite>— Corporate Client</cite>
-        </blockquote>
-      </div>
-    </section>
+<section id="about">
+  <h2>Why Work With Us</h2>
+  <div class="benefits">
+    <ul>
+      <li>Fast turnaround</li>
+      <li>No long-term contracts</li>
+      <li>Designed for real businesses</li>
+      <li>Mobile-first & SEO-ready</li>
+    </ul>
+  </div>
+</section>
 
-    <section id="products">
-      <h2>Featured Products</h2>
-      <p>Select from our curated selection, customize with your logo, and watch your brand come to life. Perfect for teams, events, or resale in your shop.</p>
-      
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="https://via.placeholder.com/400x300/007bff/fff?text=T-Shirt" alt="Custom branded t-shirt example">
-          <h3>T-Shirt</h3>
-          <p>Soft, durable cotton • Ideal for staff or promotions • Business pricing from $12/unit</p>
-          <button class="customize-btn" data-product="T-Shirt">Customize Now</button>
-        </div>
+<section id="products">
+  <h2>Popular Products</h2>
 
-        <div class="product-card">
-          <img src="https://via.placeholder.com/400x300/007bff/fff?text=Hoodie" alt="Custom branded hoodie example">
-          <h3>Hoodie</h3>
-          <p>Warm fleece interior • Premium feel • From $22/unit for orders 50+</p>
-          <button class="customize-btn" data-product="Hoodie">Customize Now</button>
-        </div>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/600x400" alt="Custom T-Shirts">
+      <h3>Custom T-Shirts</h3>
+      <p>High-quality branded shirts for your business.</p>
+      <button class="customize-btn" data-product="Custom T-Shirts">Customize</button>
+    </div>
 
-        <div class="product-card">
-          <img src="https://via.placeholder.com/400x300/007bff/fff?text=Mug" alt="Custom branded mug example">
-          <h3>Mug</h3>
-          <p>Ceramic excellence • Microwave safe • Bulk from $8/unit</p>
-          <button class="customize-btn" data-product="Mug">Customize Now</button>
-        </div>
-
-        <div class="product-card">
-          <img src="https://via.placeholder.com/400x300/007bff/fff?text=Hat" alt="Custom branded hat example">
-          <h3>Hat</h3>
-          <p>Embroidered or printed • Adjustable fit • Starting $10/unit</p>
-          <button class="customize-btn" data-product="Hat">Customize Now</button>
-        </div>
-
-        <div class="product-card">
-          <img src="https://via.placeholder.com/400x300/007bff/fff?text=Tote" alt="Custom branded tote bag example">
-          <h3>Tote Bag</h3>
-          <p>Eco-friendly canvas • Reusable & sturdy • From $6/unit</p>
-          <button class="customize-btn" data-product="Tote Bag">Customize Now</button>
-        </div>
-
-        <div class="product-card">
-          <img src="https://via.placeholder.com/400x300/007bff/fff?text=Sticker" alt="Custom branded sticker example">
-          <h3>Sticker Pack</h3>
-          <p>Vinyl durability • Custom shapes • Packs from $1.50/unit</p>
-          <button class="customize-btn" data-product="Sticker Pack">Customize Now</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Ready to Brand Your Business?</h2>
-      <p>Contact us today for a free quote. Upload your logo and let's get started!</p>
-      
-      <form id="contact-form" aria-label="Contact form">
-        <label for="name">Name <span class="required">*</span></label>
-        <input type="text" id="name" required aria-required="true"/>
-
-        <label for="email">Email <span class="required">*</span></label>
-        <input type="email" id="email" required aria-required="true"/>
-
-        <label for="business">Business Name</label>
-        <input type="text" id="business"/>
-
-        <label for="message">Your Message <span class="required">*</span></label>
-        <textarea id="message" rows="5" required aria-required="true"></textarea>
-
-        <label for="logo">Upload Logo (optional)</label>
-        <input type="file" id="logo" accept="image/*"/>
-
-        <button type="submit">Get Your Quote</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- Modal unchanged -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="close-modal" aria-label="Close modal">×</button>
-      <h2>Customize <span id="modal-product-name"></span></h2>
-      
-      <form id="order-form">
-        <label for="quantity">Quantity <span class="required">*</span></label>
-        <input type="number" id="quantity" min="1" value="10" required/>
-
-        <label for="color">Colors</label>
-        <input type="text" id="color" placeholder="e.g., Black, Teal"/>
-
-        <label for="size">Sizes</label>
-        <input type="text" id="size" placeholder="e.g., 20×S, 30×M"/>
-
-        <label for="order-logo">Upload Logo <span class="required">*</span></label>
-        <input type="file" id="order-logo" accept="image/*" required/>
-
-        <label for="notes">Notes</label>
-        <textarea id="notes" rows="4"></textarea>
-
-        <button type="submit">Submit Request</button>
-      </form>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/600x400" alt="Custom Mugs">
+      <h3>Custom Mugs</h3>
+      <p>Perfect for coffee shops and promotions.</p>
+      <button class="customize-btn" data-product="Custom Mugs">Customize</button>
     </div>
   </div>
+</section>
 
-  <footer>
-    <p>© 2026 Trade Site Setup • Madison, Alabama</p>
-    <p>Empowering Businesses with Printify-Powered Branding</p>
-  </footer>
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <form id="contact-form">
+    <div>
+      <label>Name <span class="required">*</span></label>
+      <input type="text" required />
+    </div>
+
+    <div>
+      <label>Email <span class="required">*</span></label>
+      <input type="email" required />
+    </div>
+
+    <div>
+      <label>Message <span class="required">*</span></label>
+      <textarea rows="5" required></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Trade Site Setup. All rights reserved.</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <h3 id="modal-product-name"></h3>
+
+    <form id="order-form">
+      <label>Email <span class="required">*</span></label>
+      <input type="email" required />
+
+      <label>Details</label>
+      <textarea rows="4"></textarea>
+
+      <button type="submit">Submit Order Request</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
