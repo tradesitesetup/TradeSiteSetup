@@ -1,190 +1,111 @@
-:root {
-  --primary: #2563eb;
-  --dark: #0f172a;
-  --light: #f8fafc;
-  --accent: #22c55e;
-  --card: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont;
-}
-
 body {
-  background: var(--light);
-  color: var(--dark);
-  line-height: 1.6;
+  margin: 0;
+  font-family: system-ui;
+  background: linear-gradient(180deg,#f1f5ff,#ffffff);
+  color: #0f172a;
 }
 
-/* NAV */
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 2rem;
+  padding: 1rem 2rem;
   background: white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-.nav-logo {
-  font-weight: 800;
-  font-size: 1.2rem;
-}
-
-.nav-cta {
+.nav-links a {
+  margin-right: 1rem;
   text-decoration: none;
-  background: var(--primary);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
   font-weight: 600;
+  color: #1e293b;
 }
 
-/* HERO */
+.cart-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
 .hero {
   padding: 5rem 1rem;
   text-align: center;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg,#2563eb,#1e40af);
   color: white;
 }
 
-.hero-content {
-  max-width: 800px;
-  margin: auto;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-/* BUTTON */
-.btn-primary {
-  background: var(--accent);
-  color: white;
-  padding: 0.9rem 1.8rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 700;
-  display: inline-block;
-}
-
-/* SECTIONS */
 section {
   padding: 4rem 1rem;
   text-align: center;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* TRUST */
-.trust-grid {
+.card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-.trust-card {
-  background: var(--card);
-  padding: 1.5rem;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  font-weight: 600;
-}
-
-/* SERVICES */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   gap: 2rem;
   max-width: 1000px;
   margin: auto;
 }
 
-.service-card {
-  background: white;
-  padding: 2rem;
+.card {
+  background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  padding: 2rem;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.08);
 }
 
-/* PRODUCTS */
-.products-wrapper {
+.card.clickable {
+  cursor: pointer;
+  border: 2px solid #22c55e;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.product-grid {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.product-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 18px;
-  width: 300px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-}
-
-.product-card ul {
-  list-style: none;
-  margin-top: 1rem;
-}
-
-.product-card li {
-  margin: 0.5rem 0;
-}
-
-.featured {
-  border: 3px solid var(--accent);
-}
-
-/* ABOUT */
-.about p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.05rem;
-}
-
-/* CONTACT */
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
-input, textarea {
-  padding: 0.9rem;
-  border-radius: 8px;
-  border: 1px solid #cbd5f5;
+.product-grid button {
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-/* FOOTER */
-footer {
+/* CART */
+.cart {
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  width: 300px;
+  background: white;
   padding: 1.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  background: #020617;
-  color: #94a3b8;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgba(0,0,0,0.15);
+}
+
+.hidden {
+  display: none;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: #22c55e;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
 }
