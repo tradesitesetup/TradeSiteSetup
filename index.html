@@ -1,85 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeSiteSetup</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Trade Site Setup - Custom branded products for businesses using Printify. Logos on apparel, mugs, hats and more."/>
+  <title>Trade Site Setup | Custom Branded Products for Your Business</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Header / Hero -->
-    <header class="hero">
-        <img src="assets/logo.png" alt="TradeSiteSetup Logo" class="logo">
-        <h1>Helping small businesses look professional and get found online</h1>
-        <p>Websites, Google listings, and simple online setups — done without the agency runaround.</p>
-        <button id="contactBtn">Get In Touch</button>
-    </header>
+  <header>
+    <nav aria-label="Main navigation">
+      <div class="logo">Trade Site Setup</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- What I Do Section -->
-    <section class="what-i-do">
-        <h2>What I Do</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Websites</h3>
-                <p>Clean, fast, mobile-friendly websites that make your business look legit.</p>
-            </div>
-            <div class="card">
-                <h3>Google Business Setup</h3>
-                <p>Get found in Google Maps and local search for your services.</p>
-            </div>
-            <div class="card">
-                <h3>Simple Online Presence</h3>
-                <p>Domain, email, and basic online setup handled professionally.</p>
-            </div>
-        </div>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Custom Branded Products for Your Business</h1>
+        <p>Trade Site Setup helps shops and businesses stand out with high-quality, custom-logo merchandise powered by Printify. We handle printing, fulfillment, and shipping—so you focus on your customers.</p>
+        <a href="#products" class="cta">Explore Products</a>
+      </div>
     </section>
 
-    <!-- Who I Work With -->
-    <section class="who-i-work-with">
-        <h2>Who I Work With</h2>
-        <p>Local service businesses, trades, HVAC, plumbing, and small teams who want a simple professional online presence.</p>
-    </section>
-
-    <!-- Why Choose Me -->
-    <section class="why-choose-me">
-        <h2>Why Choose Me</h2>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Originally specializing in website setups for trades and local businesses, we've evolved to offer tangible branding solutions. Based in Madison, Alabama, we partner with Printify to deliver affordable, professional custom products—apparel, accessories, promotional items, and more—with your logo front and center.</p>
+      
+      <div class="benefits">
+        <div><strong>Why Choose Us?</strong></div>
         <ul>
-            <li>No long contracts</li>
-            <li>No confusing dashboards</li>
-            <li>No agency markup</li>
-            <li>Fast turnaround</li>
-            <li>Built for mobile first</li>
+          <li>Easy logo customization — upload once, we do the rest</li>
+          <li>Competitive pricing through Printify network</li>
+          <li>Quick turnaround & reliable quality</li>
+          <li>Personal B2B service — we reach out to shops directly</li>
         </ul>
+      </div>
+
+      <div class="testimonials">
+        <blockquote>“Our branded hats turned out perfect—customers love them!”<br>— Local Shop Owner</blockquote>
+        <blockquote>“Simple process, great communication, fast delivery.”<br>— Small Business Client</blockquote>
+      </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <h2>How It Works</h2>
-        <ol>
-            <li><strong>Contact Me</strong> – Send your business info and what you’re looking for.</li>
-            <li><strong>I Build It</strong> – I handle the setup and structure.</li>
-            <li><strong>You Go Live</strong> – Review, tweak, and launch your site.</li>
-        </ol>
-    </section>
-
-    <!-- Get In Touch Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Get In Touch</h2>
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="text" name="business" placeholder="Business Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="address" placeholder="Business Address" required>
-                <input type="text" name="hours" placeholder="Hours" required>
-                <textarea name="message" placeholder="Tell me what you'd like in your site (optional)"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-            <p id="formMessage"></p>
+    <section id="products">
+      <h2>Our Products</h2>
+      <p>Browse popular items. Click "Customize" to upload your logo, choose options, and submit an order request. We'll confirm details and fulfill via Printify.</p>
+      
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/400x300/007bff/fff?text=T-Shirt" alt="Custom branded t-shirt example">
+          <h3>T-Shirt</h3>
+          <p>Premium cotton blend • Multiple colors & sizes • Starts at ~$15</p>
+          <button class="customize-btn" data-product="T-Shirt">Customize & Order</button>
         </div>
-    </div>
 
-    <script src="script.js"></script>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/400x300/007bff/fff?text=Hoodie" alt="Custom branded hoodie example">
+          <h3>Hoodie</h3>
+          <p>Fleece-lined comfort • Unisex fit • Starts at ~$25</p>
+          <button class="customize-btn" data-product="Hoodie">Customize & Order</button>
+        </div>
+
+        <div class="product-card">
+          <img src="https://via.placeholder.com/400x300/007bff/fff?text=Mug" alt="Custom branded mug example">
+          <h3>Mug</h3>
+          <p>11oz ceramic • Dishwasher safe • Starts at ~$10</p>
+          <button class="customize-btn" data-product="Mug">Customize & Order</button>
+        </div>
+
+        <div class="product-card">
+          <img src="https://via.placeholder.com/400x300/007bff/fff?text=Hat" alt="Custom branded hat example">
+          <h3>Hat</h3>
+          <p>Adjustable snapback/trucker • Various styles • Starts at ~$12</p>
+          <button class="customize-btn" data-product="Hat">Customize & Order</button>
+        </div>
+
+        <div class="product-card">
+          <img src="https://via.placeholder.com/400x300/007bff/fff?text=Tote" alt="Custom branded tote bag example">
+          <h3>Tote Bag</h3>
+          <p>Durable canvas • Spacious • Starts at ~$8</p>
+          <button class="customize-btn" data-product="Tote Bag">Customize & Order</button>
+        </div>
+
+        <div class="product-card">
+          <img src="https://via.placeholder.com/400x300/007bff/fff?text=Sticker" alt="Custom branded sticker example">
+          <h3>Sticker Pack</h3>
+          <p>Weatherproof vinyl • Multiple sizes • Starts at ~$2/pack</p>
+          <button class="customize-btn" data-product="Sticker Pack">Customize & Order</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p>Ready to brand your business? Send us your details or logo—we'll provide a quote and next steps quickly.</p>
+      
+      <form id="contact-form" aria-label="Contact form">
+        <label for="name">Name <span class="required">*</span></label>
+        <input type="text" id="name" required aria-required="true"/>
+
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" required aria-required="true"/>
+
+        <label for="business">Business / Shop Name</label>
+        <input type="text" id="business"/>
+
+        <label for="message">Message / Questions <span class="required">*</span></label>
+        <textarea id="message" rows="5" required aria-required="true"></textarea>
+
+        <label for="logo">Upload Logo (optional)</label>
+        <input type="file" id="logo" accept="image/*"/>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Customize Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close modal">&times;</button>
+      <h2>Customize <span id="modal-product-name"></span></h2>
+      
+      <form id="order-form">
+        <label for="quantity">Quantity <span class="required">*</span></label>
+        <input type="number" id="quantity" min="1" value="10" required/>
+
+        <label for="color">Preferred Color(s)</label>
+        <input type="text" id="color" placeholder="e.g., Black, Navy, White"/>
+
+        <label for="size">Size(s) (if applicable)</label>
+        <input type="text" id="size" placeholder="e.g., 10×M, 5×L"/>
+
+        <label for="order-logo">Upload Your Logo <span class="required">*</span></label>
+        <input type="file" id="order-logo" accept="image/*" required/>
+
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" rows="4" placeholder="Any special instructions..."></textarea>
+
+        <button type="submit">Submit Order Request</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Trade Site Setup • Madison, Alabama</p>
+    <p>Custom branding powered by Printify • All rights reserved.</p>
+  </footer>
 </body>
 </html>
