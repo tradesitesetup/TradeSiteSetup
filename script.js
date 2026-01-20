@@ -1,62 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scrolling for nav links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
+
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
 
-  // Modal functionality
   const modal = document.getElementById('modal');
   const modalProductName = document.getElementById('modal-product-name');
   const closeModal = document.querySelector('.close-modal');
   const customizeButtons = document.querySelectorAll('.customize-btn');
 
-  customizeButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      modalProductName.textContent = btn.dataset.product;
-      modal.style.display = 'flex';
-      modal.setAttribute('aria-hidden', 'false');
+  if (modal && modalProductName) {
+    customizeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modalProductName.textContent = btn.dataset.product;
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden', 'false');
+      });
     });
-  });
 
-  closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-    modal.setAttribute('aria-hidden', 'true');
-  });
-
-  modal.addEventListener('click', e => {
-    if (e.target === modal) {
+    closeModal?.addEventListener('click', () => {
       modal.style.display = 'none';
       modal.setAttribute('aria-hidden', 'true');
-    }
-  });
+    });
 
-  // Form submissions (simulated – replace with real backend/Formspree/etc. later)
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
   const orderForm = document.getElementById('order-form');
-  orderForm.addEventListener('submit', e => {
+  orderForm?.addEventListener('submit', e => {
     e.preventDefault();
-    if (orderForm.checkValidity()) {
-      alert('Order request submitted! We’ll review your logo & details and email you a confirmation shortly.');
-      modal.style.display = 'none';
-      orderForm.reset();
-    } else {
-      alert('Please fill in all required fields.');
-    }
+    alert('Order request submitted! We’ll contact you shortly.');
+    modal.style.display = 'none';
+    orderForm.reset();
   });
 
   const contactForm = document.getElementById('contact-form');
-  contactForm.addEventListener('submit', e => {
+  contactForm?.addEventListener('submit', e => {
     e.preventDefault();
-    if (contactForm.checkValidity()) {
-      alert('Thank you! Your message has been sent. We’ll get back to you soon.');
-      contactForm.reset();
-    } else {
-      alert('Please complete all required fields.');
-    }
+    alert('Thanks! We’ll be in touch.');
+    contactForm.reset();
   });
+
 });
