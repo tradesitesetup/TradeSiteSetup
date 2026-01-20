@@ -1,35 +1,62 @@
-// Modal functionality
-const modal = document.getElementById("contactModal");
-const btn = document.getElementById("contactBtn");
-const span = document.querySelector(".close");
-const form = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
+document.addEventListener('DOMContentLoaded', () => {
+  // Smooth scrolling for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 
-btn.onclick = () => modal.style.display = "block";
-span.onclick = () => modal.style.display = "none";
-window.onclick = e => { if(e.target == modal) modal.style.display = "none"; }
+  // Modal functionality
+  const modal = document.getElementById('modal');
+  const modalProductName = document.getElementById('modal-product-name');
+  const closeModal = document.querySelector('.close-modal');
+  const customizeButtons = document.querySelectorAll('.customize-btn');
 
-// Form submission
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  customizeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modalProductName.textContent = btn.dataset.product;
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden', 'false');
+    });
+  });
 
-    const formData = new FormData(form);
+  closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+  });
 
-    try {
-        // Replace this URL with your form handling backend or service
-        const response = await fetch("https://formspree.io/f/your-form-id", {
-            method: "POST",
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-        });
-
-        if(response.ok){
-            formMessage.innerText = "Thank you! Your message has been sent.";
-            form.reset();
-        } else {
-            formMessage.innerText = "Oops! Something went wrong.";
-        }
-    } catch (error) {
-        formMessage.innerText = "Oops! Something went wrong.";
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
     }
+  });
+
+  // Form submissions (simulated – replace with real backend/Formspree/etc. later)
+  const orderForm = document.getElementById('order-form');
+  orderForm.addEventListener('submit', e => {
+    e.preventDefault();
+    if (orderForm.checkValidity()) {
+      alert('Order request submitted! We’ll review your logo & details and email you a confirmation shortly.');
+      modal.style.display = 'none';
+      orderForm.reset();
+    } else {
+      alert('Please fill in all required fields.');
+    }
+  });
+
+  const contactForm = document.getElementById('contact-form');
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    if (contactForm.checkValidity()) {
+      alert('Thank you! Your message has been sent. We’ll get back to you soon.');
+      contactForm.reset();
+    } else {
+      alert('Please complete all required fields.');
+    }
+  });
 });
