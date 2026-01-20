@@ -1,62 +1,37 @@
-/* =========================
-   RESET & BASE
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
   --primary: #0d6efd;
-  --primary-dark: #084298;
   --accent: #20c997;
-  --bg-light: #f8fafc;
-  --bg-dark: #0f172a;
-  --text-dark: #0f172a;
-  --text-muted: #475569;
-  --card-bg: #ffffff;
-  --radius-lg: 18px;
-  --radius-md: 12px;
-  --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
-  --shadow-strong: 0 20px 60px rgba(0,0,0,0.18);
+  --dark: #0f172a;
+  --muted: #475569;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --radius: 18px;
+  --shadow: 0 18px 50px rgba(0,0,0,0.12);
 }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
-  color: var(--text-dark);
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
   line-height: 1.7;
 }
 
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.required {
-  color: #dc3545;
-}
-
-/* =========================
-   HEADER & NAV
-========================= */
+/* HEADER */
 header {
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
-  z-index: 100;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0,0,0,0.05);
+  z-index: 100;
 }
 
 nav {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 1.2rem 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -64,12 +39,11 @@ nav {
 }
 
 .logo {
-  font-size: 1.7rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  font-weight: 900;
+  font-size: 1.6rem;
   background: linear-gradient(90deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
   color: transparent;
+  -webkit-background-clip: text;
 }
 
 nav ul {
@@ -78,76 +52,54 @@ nav ul {
   gap: 2rem;
 }
 
-nav a {
-  font-weight: 600;
-  color: var(--text-dark);
-  opacity: 0.85;
-}
-
-nav a:hover {
-  opacity: 1;
-}
-
-/* =========================
-   HERO (BIG IMPACT)
-========================= */
+/* HERO */
 .hero {
   padding: 9rem 1.5rem 7rem;
   text-align: center;
-  background:
-    radial-gradient(circle at top, rgba(13,110,253,0.25), transparent 55%),
-    linear-gradient(135deg, #0d6efd, #084298);
+  background: linear-gradient(135deg, #0d6efd, #084298);
   color: white;
 }
 
 .hero-content {
   max-width: 900px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 5vw, 3.4rem);
-  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto 2.5rem;
-  opacity: 0.95;
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-/* =========================
-   CTA BUTTON
-========================= */
+/* CTA */
 .cta,
-button[type="submit"],
-.customize-btn {
+button {
   padding: 1rem 2.2rem;
-  font-size: 1.05rem;
-  font-weight: 700;
   border-radius: 999px;
+  font-weight: 700;
   border: none;
   cursor: pointer;
-  transition: all 0.25s ease;
 }
 
 .cta {
   background: white;
   color: var(--primary);
-  box-shadow: var(--shadow-soft);
 }
 
-.cta:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: var(--shadow-strong);
+.cta.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
 }
 
-/* =========================
-   SECTIONS (ALWAYS CENTERED)
-========================= */
+/* SECTIONS (ALWAYS CENTERED) */
 section {
   padding: 6rem 1.5rem;
   display: flex;
@@ -160,186 +112,108 @@ section > * {
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 2.6rem);
   text-align: center;
-  margin-bottom: 2.5rem;
-  font-weight: 800;
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
 }
 
-/* =========================
-   BENEFITS (READABLE + CLEAN)
-========================= */
-.benefits {
-  background: var(--card-bg);
-  padding: 3rem;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.benefits ul {
-  list-style: none;
+/* STEPS */
+.steps {
   display: grid;
-  gap: 1.2rem;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.benefits li {
-  font-size: 1.1rem;
-  padding-left: 2.2rem;
-  position: relative;
-  color: var(--text-muted);
+.step {
+  background: var(--card);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-.benefits li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
+.step span {
+  font-size: 2rem;
   font-weight: 900;
+  color: var(--primary);
 }
 
-/* =========================
-   PRODUCT GRID (RESPONSIVE MAGIC)
-========================= */
+/* PRODUCTS */
 .product-grid {
   display: grid;
   gap: 2.5rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-items: stretch;
 }
 
 .product-card {
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
+  background: var(--card);
+  border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-strong);
 }
 
 .product-card img {
-  width: 100%;
   height: 220px;
   object-fit: cover;
 }
 
-.product-card h3 {
-  font-size: 1.5rem;
-  padding: 1.4rem 1.6rem 0.5rem;
-}
-
+.product-card h3,
 .product-card p {
-  padding: 0 1.6rem 1.6rem;
-  color: var(--text-muted);
-  flex-grow: 1;
+  padding: 1.4rem;
 }
 
 .customize-btn {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
+  width: 100%;
   border-radius: 0;
 }
 
-/* =========================
-   FORMS (HIGH-END LOOK)
-========================= */
-form {
-  background: var(--card-bg);
-  padding: 3rem;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
+/* TRUST */
+.trust-grid {
   display: grid;
-  gap: 1.4rem;
-  max-width: 640px;
-  margin: 0 auto;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-label {
-  font-weight: 700;
+.trust-card {
+  background: var(--card);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
 }
 
-input,
-textarea {
+/* FORMS */
+form {
+  background: var(--card);
+  padding: 3rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  gap: 1.2rem;
+}
+
+input, textarea {
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid #cbd5e1;
-  font-size: 1rem;
 }
 
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(13,110,253,0.15);
-}
-
-/* =========================
-   MODAL
-========================= */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(15,23,42,0.7);
-  z-index: 200;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 2.5rem;
-  border-radius: var(--radius-lg);
-  width: 100%;
-  max-width: 520px;
-  position: relative;
-}
-
-.close-modal {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 footer {
-  background: var(--bg-dark);
+  background: var(--dark);
   color: #cbd5e1;
   text-align: center;
   padding: 3rem 1.5rem;
-  font-size: 0.95rem;
 }
 
-/* =========================
-   MOBILE REFINEMENT
-========================= */
+/* MOBILE */
 @media (max-width: 600px) {
-  nav ul {
-    gap: 1.2rem;
-  }
-
-  .hero {
-    padding: 6rem 1.2rem 4.5rem;
-  }
-
   .product-grid {
     grid-template-columns: 1fr;
-  }
-
-  form {
-    padding: 2rem;
   }
 }
