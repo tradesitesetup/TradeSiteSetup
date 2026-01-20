@@ -1,20 +1,38 @@
-/* Reset & Base */
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #f8f9fa; /* Explicit fallback color */
+/* =========================
+   RESET & BASE STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a { color: #007bff; text-decoration: none; }
-a:hover { text-decoration: underline; }
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
+}
 
-.required { color: #dc3545; font-size: 0.9em; }
+a {
+  color: #007bff;
+  text-decoration: none;
+}
 
-/* Header & Nav */
+a:hover {
+  text-decoration: underline;
+}
+
+.required {
+  color: #dc3545;
+  font-size: 0.9em;
+}
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
 header {
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
@@ -24,13 +42,17 @@ header {
 nav {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo { font-size: 1.6rem; font-weight: bold; color: #007bff; }
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #007bff;
+}
 
 nav ul {
   display: flex;
@@ -41,28 +63,46 @@ nav ul {
 nav a {
   font-weight: 500;
   padding: 0.5rem 0;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
-nav a:hover { color: #0056b3; }
+nav a:hover {
+  color: #0056b3;
+}
 
-/* Hero */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
   background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 8rem 1.5rem 6rem;
 }
 
-.hero-content { max-width: 900px; margin: 0 auto; }
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-.hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
 
-.hero p { font-size: 1.25rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
 
-/* CTA Button */
-.cta, button[type="submit"], .customize-btn {
-  background: #fff;
+/* =========================
+   BUTTONS / CTA
+========================= */
+.cta,
+button[type="submit"],
+.customize-btn {
+  background: #ffffff;
   color: #007bff;
   border: none;
   padding: 0.9rem 1.8rem;
@@ -70,40 +110,63 @@ nav a:hover { color: #0056b3; }
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
-.cta:hover, button[type="submit"]:hover, .customize-btn:hover {
+.cta:hover,
+button[type="submit"]:hover,
+.customize-btn:hover {
   background: #f0f8ff;
   transform: translateY(-2px);
 }
 
-/* Sections */
+/* =========================
+   SECTIONS
+========================= */
 section {
   padding: 5rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-h2 { font-size: 2.4rem; text-align: center; margin-bottom: 2rem; color: #222; }
-
-/* About & Benefits */
-.benefits { margin: 2rem auto; max-width: 700px; }
-.benefits ul { list-style: none; margin-top: 1rem; }
-.benefits li { margin: 0.8rem 0; font-size: 1.1rem; padding-left: 1.8rem; position: relative; }
-.benefits li::before { content:"✓"; color:#007bff; position:absolute; left:0; }
-
-.testimonials { margin-top: 3rem; display: grid; gap: 1.5rem; }
-.testimonials blockquote {
-  font-style: italic;
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  border-left: 5px solid #007bff;
+h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
 }
 
-/* Products Grid */
+/* =========================
+   BENEFITS / ABOUT
+========================= */
+.benefits {
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.benefits ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.benefits li {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -112,14 +175,16 @@ h2 { font-size: 2.4rem; text-align: center; margin-bottom: 2rem; color: #222; }
 }
 
 .product-card {
-  background: white;
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: transform 0.25s;
+  transition: transform 0.25s ease;
 }
 
-.product-card:hover { transform: translateY(-8px); }
+.product-card:hover {
+  transform: translateY(-8px);
+}
 
 .product-card img {
   width: 100%;
@@ -127,18 +192,27 @@ h2 { font-size: 2.4rem; text-align: center; margin-bottom: 2rem; color: #222; }
   object-fit: cover;
 }
 
-.product-card h3 { padding: 1rem 1.2rem 0.4rem; font-size: 1.4rem; }
-.product-card p { padding: 0 1.2rem 1rem; color: #555; font-size: 0.95rem; }
+.product-card h3 {
+  padding: 1rem 1.2rem 0.4rem;
+  font-size: 1.4rem;
+}
+
+.product-card p {
+  padding: 0 1.2rem 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
 
 .customize-btn {
   width: 100%;
   border-radius: 0;
   background: #007bff;
-  color: white;
-  padding: 1rem;
+  color: #ffffff;
 }
 
-/* Contact Form */
+/* =========================
+   FORMS
+========================= */
 form {
   max-width: 600px;
   margin: 2rem auto 0;
@@ -146,42 +220,53 @@ form {
   gap: 1.2rem;
 }
 
-label { font-weight: 600; margin-bottom: 0.3rem; display: block; }
-
-input, textarea {
-  width: 100%;
-  padding: 0.9rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
 }
 
-input:focus, textarea:focus {
+input,
+textarea {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input:focus,
+textarea:focus {
   outline: none;
   border-color: #007bff;
   box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
 }
 
-button[type="submit"] { justify-self: start; }
+button[type="submit"] {
+  justify-self: flex-start;
+}
 
-/* Modal */
+/* =========================
+   MODAL
+========================= */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
   z-index: 200;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
 }
 
 .modal-content {
-  background: white;
+  background: #ffffff;
   max-width: 500px;
   width: 100%;
-  border-radius: 12px;
   padding: 2rem;
+  border-radius: 12px;
   position: relative;
   box-shadow: 0 10px 40px rgba(0,0,0,0.25);
 }
@@ -197,22 +282,45 @@ button[type="submit"] { justify-self: start; }
   color: #777;
 }
 
-.close-modal:hover { color: #333; }
+.close-modal:hover {
+  color: #333;
+}
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
 footer {
   background: #333;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 2.5rem 1rem;
   font-size: 0.95rem;
 }
 
-/* Mobile Responsiveness */
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
 @media (max-width: 768px) {
-  nav ul { gap: 1.2rem; font-size: 0.95rem; flex-wrap: wrap; justify-content: center; }
-  .hero { padding: 6rem 1rem 4rem; }
-  .hero h1 { font-size: 2.2rem; }
-  .hero p { font-size: 1.1rem; }
-  h2 { font-size: 2rem; }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 6rem 1rem 4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
 }
