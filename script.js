@@ -1,28 +1,29 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("modal");
-  const modalTitle = document.getElementById("modal-product-name");
+let cart = {};
 
-  document.querySelectorAll(".customize-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      modalTitle.textContent = btn.dataset.product;
-      modal.style.display = "flex";
-    });
-  });
+function toggleCart() {
+  document.getElementById("cart").classList.toggle("hidden");
+}
 
-  document.querySelector(".close-modal")?.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+function addToCart(name, price) {
+  cart[name] = cart[name] ? cart[name] + 1 : 1;
+  renderCart(price);
+}
 
-  document.getElementById("contact-form")?.addEventListener("submit", e => {
-    e.preventDefault();
-    alert("Thanks! We’ll contact you within 24 hours.");
-    e.target.reset();
-  });
+function renderCart(price) {
+  const items = document.getElementById("cart-items");
+  items.innerHTML = "";
+  let total = 0;
 
-  document.getElementById("order-form")?.addEventListener("submit", e => {
-    e.preventDefault();
-    alert("Request received! We'll be in touch shortly.");
-    modal.style.display = "none";
-    e.target.reset();
-  });
-});
+  for (let item in cart) {
+    total += cart[item] * price;
+    items.innerHTML += `
+      <div>
+        ${item} x ${cart[item]}
+        <button onclick="cart['${item}']--; if(cart['${item}']<=0) delete cart['${item}']; renderCart(${price})">-</button>
+        <button onclick="cart['${item}']++; renderCart(${price})">+</button>
+      </div>
+    `;
+  }
+
+  document.getElementById("cart-total").innerText = "Total: $" + total;
+}
