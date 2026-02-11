@@ -19,7 +19,6 @@
             background-color: #fff;
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -54,21 +53,12 @@
         .tagline {
             font-size: 14px;
             color: #6b7280;
-            margin-top: 2px;
-        }
-
-        .header-email {
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
         .email-link {
             color: #2563eb;
             text-decoration: none;
             font-weight: 500;
-            font-size: 16px;
-            transition: color 0.3s ease;
         }
 
         .email-link:hover {
@@ -76,7 +66,7 @@
             text-decoration: underline;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
             color: white;
@@ -86,9 +76,7 @@
 
         .hero h1 {
             font-size: 42px;
-            font-weight: 700;
             margin-bottom: 20px;
-            line-height: 1.2;
         }
 
         .hero p {
@@ -97,29 +85,23 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            opacity: 0.95;
         }
 
         .cta-button {
-            display: inline-block;
             background-color: #f59e0b;
             color: #111827;
             padding: 16px 40px;
-            text-decoration: none;
             border-radius: 8px;
+            text-decoration: none;
             font-weight: 600;
-            font-size: 18px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background 0.2s ease, transform 0.2s ease;
         }
 
         .cta-button:hover {
             background-color: #d97706;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        /* Section Styles */
         section {
             padding: 70px 0;
         }
@@ -129,15 +111,13 @@
         }
 
         .section-title {
-            font-size: 36px;
-            font-weight: 700;
             text-align: center;
+            font-size: 36px;
             margin-bottom: 15px;
             color: #111827;
         }
 
         .section-subtitle {
-            font-size: 18px;
             text-align: center;
             color: #6b7280;
             margin-bottom: 50px;
@@ -146,95 +126,86 @@
             margin-right: auto;
         }
 
-        /* Why Website Matters */
-        .benefits-grid {
+        /* Cards */
+        .benefits-grid,
+        .process-steps,
+        .target-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
 
-        .benefit-card {
+        .benefits-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .benefit-card,
+        .target-item,
+        .step,
+        .faq-item,
+        .about-content,
+        .services-list,
+        .pricing-card {
             background: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-        }
-
-        .benefit-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .benefit-card h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-            color: #111827;
-        }
-
-        .benefit-card p {
-            color: #4b5563;
-            line-height: 1.7;
-        }
-
-        /* Who This Is For */
-        .target-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 900px;
-            margin: 0 auto;
         }
 
         .target-item {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
             border-left: 4px solid #2563eb;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
         }
 
         /* Services */
-        .services-list {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        }
-
         .service-check {
             color: #10b981;
-            font-size: 24px;
-            margin-right: 15px;
+            font-size: 22px;
+            margin-right: 12px;
         }
 
         /* Process */
+        .process-steps {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin-top: 40px;
+        }
+
+        .step {
+            position: relative;
+        }
+
         .step-number {
+            position: absolute;
+            top: -15px;
+            left: 30px;
             background: #f59e0b;
             color: #111827;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .payment-note {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
         }
 
         /* Pricing */
         .pricing-card {
+            border: 2px solid #f59e0b;
             max-width: 600px;
             margin: 0 auto;
-            background: white;
-            padding: 45px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-            border: 2px solid #f59e0b;
         }
 
         .price-amount {
+            font-size: 56px;
             color: #1d4ed8;
+            text-align: center;
         }
 
         /* About */
@@ -243,7 +214,6 @@
             border-left: 4px solid #f59e0b;
             padding: 20px;
             margin-top: 25px;
-            border-radius: 6px;
         }
 
         .about-highlight p {
@@ -252,42 +222,111 @@
 
         /* Footer */
         footer {
-            background-color: #111827;
+            background: #111827;
             color: #9ca3af;
-            padding: 40px 0;
             text-align: center;
+            padding: 40px 0;
         }
 
         footer .email-link {
             color: #93c5fd;
         }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .section-title { font-size: 28px; }
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-container">
-                    <div class="logo">TradeSiteSetup</div>
-                    <div class="tagline">Professional Websites for Local Businesses</div>
-                </div>
-                <div class="header-email">
-                    <a href="mailto:will@tradesitesetup.com" class="email-link">will@tradesitesetup.com</a>
-                </div>
+
+<header>
+    <div class="container header-content">
+        <div>
+            <div class="logo">TradeSiteSetup</div>
+            <div class="tagline">Professional Websites for Local Businesses</div>
+        </div>
+        <a href="mailto:will@tradesitesetup.com" class="email-link">will@tradesitesetup.com</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Get a Professional Website for Your Local Business</h1>
+        <p>TradeSiteSetup builds clean, credible websites that help local businesses get found and trusted.</p>
+        <a href="mailto:will@tradesitesetup.com?subject=Website Inquiry" class="cta-button">Get Your Website Started</a>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Why Your Business Needs a Website</h2>
+        <p class="section-subtitle">Your website is often the first impression customers have.</p>
+
+        <div class="benefits-grid">
+            <div class="benefit-card"><h3>Build Trust</h3><p>Look legitimate and professional.</p></div>
+            <div class="benefit-card"><h3>Get Found</h3><p>Show up when customers search.</p></div>
+            <div class="benefit-card"><h3>Be Contacted</h3><p>Make it easy to reach you.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section-alt">
+    <div class="container">
+        <h2 class="section-title">Simple 3-Step Process</h2>
+
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Reach Out</h3>
+                <p>Email me about your business.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Review & Approve</h3>
+                <p>I build and revise your site.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Payment & Launch</h3>
+                <p>Stripe invoice after approval. Site goes live.</p>
             </div>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Get a Professional Website for Your Local Business</h1>
-            <p>TradeSiteSetup builds clean, credible websites that help local businesses get found and trusted by customers. Simple, affordable, and built for you.</p>
-            <a href="mailto:will@tradesitesetup.com?subject=Website Inquiry" class="cta-button">Get Your Website Started</a>
+        <div class="payment-note">
+            <p>✓ No upfront payment required</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Rest of your HTML remains unchanged -->
+<section>
+    <div class="container">
+        <h2 class="section-title">Pricing</h2>
+        <div class="pricing-card">
+            <p class="price-amount">$300+</p>
+            <p style="text-align:center;color:#6b7280;">One-time setup. No monthly fees.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-alt">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>I’m Will, based in Huntsville, Alabama. I graduated from UAH where I played baseball.</p>
+            <p>I help local businesses grow by building professional websites.</p>
+            <div class="about-highlight">
+                <p>A website is the first step to growth.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p><strong>TradeSiteSetup</strong></p>
+    <p><a href="mailto:will@tradesitesetup.com" class="email-link">will@tradesitesetup.com</a></p>
+    <p>Huntsville, Alabama</p>
+</footer>
+
 </body>
 </html>
