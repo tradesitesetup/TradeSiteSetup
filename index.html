@@ -94,7 +94,7 @@
             box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
         }
 
-        /* --- HAMBURGER MENU (Mobile Only) --- */
+        /* --- HAMBURGER MENU --- */
         .hamburger {
             display: none;
             cursor: pointer;
@@ -118,19 +118,19 @@
         .hero {
             background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 100%);
             color: white;
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 44px;
+            font-size: 48px;
             font-weight: 800;
             margin-bottom: 24px;
             line-height: 1.1;
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 40px;
             max-width: 700px;
             margin-left: auto;
@@ -142,7 +142,7 @@
             display: inline-block;
             background-color: #6366f1;
             color: white;
-            padding: 16px 36px;
+            padding: 18px 44px;
             text-decoration: none;
             border-radius: 12px;
             font-weight: 700;
@@ -153,86 +153,109 @@
 
         .cta-button:hover { transform: translateY(-3px); background-color: #4f46e5; }
 
-        /* --- SECTION COLORING --- */
-        section { padding: 80px 0; }
+        /* --- SECTION BACKGROUND COLORING --- */
+        section { padding: 100px 0; }
+        
         #benefits { background-color: #ffffff; }
         #who { background-color: #f8fafc; }
         #services { background-color: #ffffff; }
-        #process { background-color: #f1f5ff; }
+        #process { background-color: #f1f5ff; } /* Indigo Wash */
         #pricing { background-color: #ffffff; }
         #about { background-color: #f8fafc; }
         #faq { background-color: #ffffff; }
 
-        .section-title { font-size: 34px; font-weight: 800; text-align: center; margin-bottom: 15px; color: #0f172a; }
-        .section-subtitle { font-size: 18px; text-align: center; color: #64748b; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .section-title { font-size: 38px; font-weight: 800; text-align: center; margin-bottom: 15px; color: #0f172a; }
+        .section-subtitle { font-size: 19px; text-align: center; color: #64748b; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
 
         /* Grid & Cards */
         .grid-layout {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            gap: 30px;
         }
 
         .card {
             background: white;
-            padding: 35px;
+            padding: 40px;
             border-radius: 16px;
             border: 1px solid #e2e8f0;
+            transition: 0.3s;
         }
 
-        .benefit-icon { font-size: 36px; margin-bottom: 15px; display: inline-block; padding: 10px; background: #f1f5ff; border-radius: 12px; }
-        .target-item { border-left: 5px solid #6366f1; padding: 25px; background: white; border-radius: 0 12px 12px 0; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+        .benefit-card:hover { border-color: #6366f1; transform: translateY(-5px); }
+        .benefit-icon { font-size: 40px; margin-bottom: 20px; display: inline-block; padding: 10px; background: #f1f5ff; border-radius: 12px; }
 
-        /* Services */
+        .target-item { border-left: 5px solid #6366f1; padding: 30px; background: white; border-radius: 0 12px 12px 0; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
+
+        /* Services List */
         .services-list {
             max-width: 800px;
             margin: 0 auto;
             background: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 16px;
             border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
-        .service-item { display: flex; align-items: flex-start; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f1f5f9; }
-        .service-item:last-child { border-bottom: none; }
-        .service-check { color: #6366f1; font-size: 20px; margin-right: 15px; font-weight: bold; }
+        .service-item { display: flex; align-items: flex-start; margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid #f1f5f9; }
+        .service-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .service-check { color: #6366f1; font-size: 24px; margin-right: 15px; font-weight: bold; }
 
         /* Process Steps */
-        .step { position: relative; background: white; padding: 35px; border-radius: 16px; border: 1px solid #e2e8f0; }
+        .step { position: relative; }
         .step-number {
-            position: absolute; top: -15px; left: 25px; background: #6366f1; color: white;
-            width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;
+            position: absolute; top: -20px; left: 35px; background: #6366f1; color: white;
+            width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;
         }
+
+        .payment-note {
+            background: #ecfdf5; border-left: 4px solid #10b981; padding: 25px; margin-top: 40px; border-radius: 8px; text-align: center;
+        }
+        .payment-note p { color: #065f46; font-weight: 600; font-size: 17px; }
 
         /* Pricing Card */
         .pricing-card {
-            max-width: 550px;
+            max-width: 600px;
             margin: 0 auto;
             background: #0f172a;
             color: white;
-            padding: 40px;
+            padding: 50px;
             border-radius: 24px;
             border: 3px solid #6366f1;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
         }
 
-        .price-amount { font-size: 50px; font-weight: 800; color: white; }
-        .pricing-details { list-style: none; margin-top: 25px; text-align: left; }
-        .pricing-details li { padding: 10px 0; border-bottom: 1px solid #1e293b; color: #cbd5e1; font-size: 15px; }
+        .price-amount { font-size: 56px; font-weight: 800; color: white; margin-bottom: 10px; }
+        .price-starting { color: #6366f1; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        .pricing-details { list-style: none; margin-top: 30px; text-align: left; }
+        .pricing-details li { padding: 12px 0; border-bottom: 1px solid #1e293b; color: #cbd5e1; }
         .pricing-details li:before { content: "✓"; color: #6366f1; margin-right: 12px; font-weight: 900; }
 
+        /* About & FAQ Text */
+        .about-content p { margin-bottom: 20px; font-size: 17px; }
+        .about-highlight { background: #eef2ff; border-left: 5px solid #6366f1; padding: 25px; border-radius: 0 12px 12px 0; margin-top: 25px; }
+        .about-highlight p { color: #1e40af; font-weight: 600; margin-bottom: 0; }
+
+        .faq-item { background: white; border: 1px solid #e2e8f0; padding: 30px; border-radius: 12px; margin-bottom: 20px; }
+        .faq-item h3 { color: #0f172a; margin-bottom: 12px; }
+
         /* Final CTA */
-        .final-cta { background: #0f172a; color: white; padding: 70px 0; text-align: center; }
-        .cta-email { 
-            display: inline-block; background: #6366f1; color: white; padding: 18px 36px; 
-            border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 20px; margin-top: 20px;
+        .final-cta { background: #0f172a; color: white; padding: 80px 0; text-align: center; }
+        .final-cta h2 { font-size: 42px; font-weight: 800; margin-bottom: 20px; }
+        .final-cta .cta-email { 
+            display: inline-block; background: #6366f1; color: white; padding: 20px 40px; 
+            border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 22px; margin-top: 20px;
+            transition: all 0.3s ease;
             cursor: pointer;
         }
 
         /* Footer */
-        footer { background-color: #020617; color: #94a3b8; padding: 50px 0; text-align: center; }
+        footer { background-color: #020617; color: #94a3b8; padding: 60px 0; text-align: center; }
         .footer-email { color: #6366f1; text-decoration: none; font-weight: 600; cursor: pointer; }
 
-        /* --- MOBILE RESPONSIVE LOGIC --- */
+        /* --- MOBILE NAVIGATION LOGIC --- */
         @media (max-width: 992px) {
             .hamburger { display: block; }
             
@@ -254,15 +277,16 @@
             .nav-container.active { left: 0; }
 
             nav { flex-direction: column; width: 80%; margin: 0 auto; gap: 15px; }
-            nav a { font-size: 16px; padding: 12px; width: 100%; display: block; }
-            .header-contact-btn { width: 80%; padding: 15px; font-size: 16px; }
+            nav a { font-size: 16px; padding: 15px; width: 100%; display: block; }
+            .header-contact-btn { width: 80%; padding: 18px; font-size: 16px; }
 
-            /* Hamburger Animation */
+            /* Hamburger Animation to X */
             .hamburger.active .bar:nth-child(2) { opacity: 0; }
             .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
             .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
             .hero h1 { font-size: 32px; }
+            .hero p { font-size: 18px; }
         }
     </style>
 </head>
@@ -297,8 +321,8 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Professional Websites for Local Businesses</h1>
-            <p>Clean, credible websites that help local businesses get found and trusted. Simple, affordable, and built for you.</p>
+            <h1>Get a Professional Website for Your Local Business</h1>
+            <p>TradeSiteSetup builds clean, credible websites that help local businesses get found and trusted by customers. Simple, affordable, and built for you.</p>
             <div onclick="handleEmailClick()" class="cta-button">Get Your Website Started</div>
         </div>
     </section>
@@ -306,21 +330,22 @@
     <section id="benefits">
         <div class="container">
             <h2 class="section-title">Why Your Business Needs a Website</h2>
+            <p class="section-subtitle">In today's world, your website is often the first impression customers have of your business.</p>
             <div class="grid-layout">
-                <div class="card">
+                <div class="card benefit-card">
                     <div class="benefit-icon">🌟</div>
-                    <h3>Build Trust</h3>
-                    <p>A professional site shows customers you're legitimate and serious about your work.</p>
+                    <h3>Build Trust & Credibility</h3>
+                    <p>Customers expect legitimate businesses to have a professional online presence. A website shows you're established and serious about your work.</p>
                 </div>
-                <div class="card">
+                <div class="card benefit-card">
                     <div class="benefit-icon">📍</div>
-                    <h3>Get Found</h3>
-                    <p>Help local customers discover your business when they search for services in your area.</p>
+                    <h3>Get Found Locally</h3>
+                    <p>When people search for services in your area, a website helps you show up. Make it easy for customers to discover your business.</p>
                 </div>
-                <div class="card">
+                <div class="card benefit-card">
                     <div class="benefit-icon">📞</div>
-                    <h3>Contact Easy</h3>
-                    <p>Make it effortless for people to learn about you and hire you with a single click.</p>
+                    <h3>Make Contact Easy</h3>
+                    <p>Give customers a simple way to reach you, learn about your services, and get the information they need to hire you.</p>
                 </div>
             </div>
         </div>
@@ -329,11 +354,24 @@
     <section id="who">
         <div class="container">
             <h2 class="section-title">Who This Is For</h2>
+            <p class="section-subtitle">TradeSiteSetup is built for local business owners who need a simple, professional online presence.</p>
             <div class="grid-layout">
-                <div class="target-item"><h3>Home Services</h3><p>Plumbers, electricians, HVAC, and landscaping.</p></div>
-                <div class="target-item"><h3>Trades</h3><p>General contractors, carpenters, and painters.</p></div>
-                <div class="target-item"><h3>Local Shops</h3><p>Retail stores, salons, cafes, and boutiques.</p></div>
-                <div class="target-item"><h3>Professionals</h3><p>Consultants, accountants, and local pros.</p></div>
+                <div class="target-item">
+                    <h3>Local Service Businesses</h3>
+                    <p>Plumbers, electricians, HVAC, landscaping, and home services.</p>
+                </div>
+                <div class="target-item">
+                    <h3>Contractors & Trades</h3>
+                    <p>General contractors, carpenters, painters, and builders.</p>
+                </div>
+                <div class="target-item">
+                    <h3>Small Shops</h3>
+                    <p>Retail stores, salons, cafes, and local boutiques.</p>
+                </div>
+                <div class="target-item">
+                    <h3>Professional Services</h3>
+                    <p>Consultants, accountants, attorneys, and local professionals.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -341,10 +379,36 @@
     <section id="services">
         <div class="container">
             <h2 class="section-title">What's Included</h2>
+            <p class="section-subtitle">Everything you need for a professional online presence.</p>
             <div class="services-list">
-                <div class="service-item"><div class="service-check">✓</div><div><h3>Custom Setup</h3><p>Modern design tailored for your specific trade.</p></div></div>
-                <div class="service-item"><div class="service-check">✓</div><div><h3>Mobile-Friendly</h3><p>Looks perfect on all smartphones and tablets.</p></div></div>
-                <div class="service-item"><div class="service-check">✓</div><div><h3>Core Pages</h3><p>Home, About, Services, and Contact pages included.</p></div></div>
+                <div class="service-item">
+                    <div class="service-check">✓</div>
+                    <div class="service-content">
+                        <h3>Professional Website Setup</h3>
+                        <p>A clean, modern website that looks great and represents your business professionally.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-check">✓</div>
+                    <div class="service-content">
+                        <h3>Mobile-Friendly Design</h3>
+                        <p>Your site will work perfectly on phones, tablets, and computers. Most customers browse on mobile.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-check">✓</div>
+                    <div class="service-content">
+                        <h3>Core Pages Included</h3>
+                        <p>Home, About, Services, and Contact pages to cover all the essentials your customers need.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-check">✓</div>
+                    <div class="service-content">
+                        <h3>Easy-to-Use Layout</h3>
+                        <p>Clean, simple design that makes it easy for customers to find what they're looking for.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -352,10 +416,26 @@
     <section id="process">
         <div class="container">
             <h2 class="section-title">Simple 3-Step Process</h2>
+            <p class="section-subtitle">Getting your website up and running is straightforward and hassle-free.</p>
             <div class="grid-layout">
-                <div class="step"><div class="step-number">1</div><h3>Reach Out</h3><p>Email me about your business. We'll chat about your needs.</p></div>
-                <div class="step"><div class="step-number">2</div><h3>Review</h3><p>I build your site and we adjust it until it's exactly right.</p></div>
-                <div class="step"><div class="step-number">3</div><h3>Launch</h3><p>Pay only after approval, and your site goes live.</p></div>
+                <div class="card step">
+                    <div class="step-number">1</div>
+                    <h3>Reach Out</h3>
+                    <p>Send me an email telling me about your business and what you need. I'll ask a few questions to make sure I understand your goals.</p>
+                </div>
+                <div class="card step">
+                    <div class="step-number">2</div>
+                    <h3>Review & Approve</h3>
+                    <p>I'll build your website and send it to you for review. You can request any changes or adjustments until you're completely happy with it.</p>
+                </div>
+                <div class="card step">
+                    <div class="step-number">3</div>
+                    <h3>Payment & Launch</h3>
+                    <p>Once you approve the website, I'll send an invoice via Stripe. After payment is received, I'll publish your domain and your site goes live.</p>
+                </div>
+            </div>
+            <div class="payment-note">
+                <p>✓ No payment required upfront — you pay only after you've reviewed and approved your website.</p>
             </div>
         </div>
     </section>
@@ -363,36 +443,55 @@
     <section id="pricing">
         <div class="container">
             <h2 class="section-title">Transparent Pricing</h2>
+            <p class="section-subtitle">Simple, straightforward pricing with no surprises.</p>
             <div class="pricing-card">
-                <p style="color: #6366f1; font-weight: 700;">SETUP STARTING AT</p>
+                <p class="price-starting">Website Setup Starting at</p>
                 <div class="price-amount">$300</div>
                 <ul class="pricing-details">
-                    <li>Full Professional Design</li>
-                    <li>Mobile Responsive Layout</li>
-                    <li>Domain Setup & Core Pages</li>
-                    <li>No Monthly TradeSiteSetup Fees</li>
+                    <li>Professional website design and setup</li>
+                    <li>Mobile-responsive layout</li>
+                    <li>Core pages (Home, About, Services, Contact)</li>
+                    <li>No monthly fees from TradeSiteSetup</li>
+                    <li>Payment only after you approve your site</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="about">
-        <div class="container" style="max-width: 800px;">
+        <div class="container">
             <h2 class="section-title">About Me</h2>
-            <p>I'm based in Huntsville, AL, and a UAH graduate where I played baseball. I started TradeSiteSetup to help local trades look as professional online as they do in person.</p>
+            <div class="about-content" style="max-width: 800px; margin: 0 auto;">
+                <p>I'm based in Huntsville, Alabama, and I graduated from The University of Alabama in Huntsville (UAH), where I also played baseball. Outside of building websites, I'm passionate about sports, local business, and helping people succeed.</p>
+                <p>I started TradeSiteSetup because I saw too many great local businesses struggling to get noticed online. They do excellent work, but without a professional website, potential customers couldn't find them or didn't take them seriously.</p>
+                <p>I believe that building a website is the first step in growing a business. It's not just about having an online presence — it's about making it easier for customers to trust you, contact you, and choose you over the competition.</p>
+                <div class="about-highlight">
+                    <p>My goal is simple: help local businesses look professional online without breaking the bank or dealing with complicated tech.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="faq">
-        <div class="container" style="max-width: 800px;">
+        <div class="container">
             <h2 class="section-title">Common Questions</h2>
-            <div class="card" style="margin-bottom: 20px;">
-                <h3>How long does it take?</h3>
-                <p>Usually 1-2 weeks once I have your business info.</p>
-            </div>
-            <div class="card">
-                <h3>Are there monthly fees?</h3>
-                <p>None from me. You only pay for your annual domain/hosting costs.</p>
+            <div class="faq-list" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <h3>How long does it take to build the site?</h3>
+                    <p>Most websites are completed within 1-2 weeks, depending on the complexity and how quickly you provide the information and materials I need (like photos and service descriptions).</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need technical experience?</h3>
+                    <p>Not at all. I handle everything from start to finish. You just need to provide information about your business, and I'll take care of the rest.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are there monthly fees?</h3>
+                    <p>There are no monthly fees from TradeSiteSetup. You pay a one-time setup fee and a minimal yearly cost for your domain. No hidden recurring charges.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What happens after my site is live?</h3>
+                    <p>Once your site is published, it's yours. You can request updates or changes anytime. Many clients reach out when they want to add new services or update content.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -400,19 +499,22 @@
     <section id="contact" class="final-cta">
         <div class="container">
             <h2>Ready to Get Started?</h2>
+            <p>Send me an email and let's talk about your business and website needs.</p>
             <div onclick="handleEmailClick()" class="cta-email">will@tradesitesetup.com</div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="footer-logo" style="font-weight: 800; color: #fff; margin-bottom: 10px;">TradeSite<span>Setup</span></div>
+            <div class="logo" style="color: white; margin-bottom: 10px; display: block;">TradeSite<span>Setup</span></div>
             <p onclick="handleEmailClick()" class="footer-email">will@tradesitesetup.com</p>
-            <p>&copy; 2026 Huntsville, AL</p>
+            <p>Huntsville, Alabama</p>
+            <p>&copy; 2026 TradeSiteSetup. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
+        // --- MOBILE MENU LOGIC ---
         const hamburger = document.getElementById('hamburger-btn');
         const navMenu = document.getElementById('nav-menu');
 
@@ -423,18 +525,25 @@
             navMenu.classList.toggle('active');
         }
 
+        // --- EMAIL HANDLER (MOBILE & DESKTOP) ---
         function handleEmailClick() {
             const email = "will@tradesitesetup.com";
-            const subject = "Website Inquiry";
+            const subject = "Website Inquiry - TradeSiteSetup";
             
-            // Standard Mailto
+            // 1. Try to open the default mail application
             window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
             
-            // Clipboard Fallback
+            // 2. Fail-safe: Copy to clipboard if mail client doesn't open
             if (navigator.clipboard && window.isSecureContext) {
                 navigator.clipboard.writeText(email).then(() => {
-                    alert("Opening email app...\nEmail address copied to clipboard!");
+                    alert("Opening your mail app...\n\n(Email address has also been copied to your clipboard just in case!)");
+                }).catch(err => {
+                    // Just alert if clipboard fails
+                    alert("Contact: will@tradesitesetup.com");
                 });
+            } else {
+                // Older browser fallback
+                alert("Contact: will@tradesitesetup.com");
             }
         }
     </script>
