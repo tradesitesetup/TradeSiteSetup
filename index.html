@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +13,9 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #334155; /* Refined Slate Gray */
             background-color: #fff;
         }
 
@@ -30,12 +29,12 @@
         /* Header */
         header {
             background-color: #fff;
-            border-bottom: 1px solid #e5e5e5;
-            padding: 20px 0;
+            border-bottom: 1px solid #f1f5f9;
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
         .header-content {
@@ -47,15 +46,22 @@
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #2563eb;
+            font-size: 26px;
+            font-weight: 800;
+            color: #0f172a; /* Deep Navy */
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #6366f1; /* Indigo Pop */
         }
 
         .tagline {
-            font-size: 14px;
-            color: #6b7280;
-            margin-top: 2px;
+            font-size: 13px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: -2px;
         }
 
         .header-email {
@@ -65,82 +71,86 @@
         }
 
         .email-link {
-            color: #2563eb;
+            color: #6366f1;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 16px;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .email-link:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
+            color: #4f46e5;
+            text-decoration: none;
+            opacity: 0.8;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 100%);
             color: white;
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            letter-spacing: -1px;
         }
 
         .hero p {
             font-size: 20px;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            opacity: 0.95;
+            color: #cbd5e1;
         }
 
         .cta-button {
             display: inline-block;
-            background-color: white;
-            color: #2563eb;
-            padding: 16px 40px;
+            background-color: #6366f1;
+            color: white;
+            padding: 18px 44px;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
+            border-radius: 12px;
+            font-weight: 700;
             font-size: 18px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
+            background-color: #4f46e5;
+            box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.4);
         }
 
         /* Section Styles */
         section {
-            padding: 70px 0;
+            padding: 100px 0;
         }
 
         .section-alt {
-            background-color: #f9fafb;
+            background-color: #f8fafc;
         }
 
         .section-title {
-            font-size: 36px;
-            font-weight: 700;
+            font-size: 38px;
+            font-weight: 800;
             text-align: center;
             margin-bottom: 15px;
-            color: #111827;
+            color: #0f172a;
+            letter-spacing: -0.5px;
         }
 
         .section-subtitle {
-            font-size: 18px;
+            font-size: 19px;
             text-align: center;
-            color: #6b7280;
-            margin-bottom: 50px;
+            color: #64748b;
+            margin-bottom: 60px;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
@@ -151,36 +161,32 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
 
         .benefit-card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
         }
 
         .benefit-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+            border-color: #6366f1;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
         .benefit-icon {
             font-size: 40px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            display: block;
         }
 
         .benefit-card h3 {
             font-size: 22px;
             margin-bottom: 12px;
-            color: #111827;
-        }
-
-        .benefit-card p {
-            color: #4b5563;
-            line-height: 1.7;
+            color: #0f172a;
         }
 
         /* Who This Is For */
@@ -194,39 +200,35 @@
 
         .target-item {
             background: white;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #2563eb;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid #6366f1;
         }
 
         .target-item h3 {
             font-size: 20px;
-            color: #111827;
+            color: #0f172a;
             margin-bottom: 8px;
-        }
-
-        .target-item p {
-            color: #6b7280;
-            font-size: 15px;
         }
 
         /* Services */
         .services-list {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
         .service-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #f1f5f9;
         }
 
         .service-item:last-child {
@@ -238,78 +240,60 @@
         .service-check {
             color: #10b981;
             font-size: 24px;
-            margin-right: 15px;
+            margin-right: 20px;
             flex-shrink: 0;
         }
 
         .service-content h3 {
             font-size: 20px;
-            color: #111827;
-            margin-bottom: 6px;
-        }
-
-        .service-content p {
-            color: #6b7280;
-            line-height: 1.6;
+            color: #0f172a;
+            margin-bottom: 8px;
         }
 
         /* Process Steps */
         .process-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
+            gap: 40px;
         }
 
         .step {
             background: white;
-            padding: 35px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
             position: relative;
         }
 
         .step-number {
             position: absolute;
-            top: -15px;
-            left: 35px;
-            background: #2563eb;
+            top: -20px;
+            left: 30px;
+            background: #6366f1;
             color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        .step h3 {
-            font-size: 22px;
-            margin-top: 15px;
-            margin-bottom: 12px;
-            color: #111827;
-        }
-
-        .step p {
-            color: #4b5563;
-            line-height: 1.7;
+            font-weight: 800;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
         }
 
         .payment-note {
-            background: #ecfdf5;
-            border-left: 4px solid #10b981;
-            padding: 20px;
-            margin-top: 30px;
-            border-radius: 6px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 24px;
+            margin-top: 50px;
+            border-radius: 12px;
             text-align: center;
         }
 
         .payment-note p {
-            color: #065f46;
-            font-weight: 500;
-            font-size: 17px;
+            color: #166534;
+            font-weight: 600;
         }
 
         /* Pricing */
@@ -317,238 +301,111 @@
             max-width: 600px;
             margin: 0 auto;
             background: white;
-            padding: 45px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-            border: 2px solid #2563eb;
-        }
-
-        .price-tag {
-            text-align: center;
-            margin-bottom: 30px;
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 2px solid #6366f1;
+            position: relative;
         }
 
         .price-amount {
-            font-size: 56px;
-            font-weight: 700;
-            color: #2563eb;
+            font-size: 64px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1;
         }
 
         .price-starting {
-            font-size: 18px;
-            color: #6b7280;
-            margin-bottom: 8px;
-        }
-
-        .pricing-details {
-            list-style: none;
+            font-weight: 700;
+            color: #6366f1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .pricing-details li {
-            padding: 12px 0;
-            border-bottom: 1px solid #e5e7eb;
-            color: #4b5563;
-            font-size: 16px;
-        }
-
-        .pricing-details li:last-child {
-            border-bottom: none;
+            padding: 14px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
         }
 
         .pricing-details li:before {
             content: "✓";
             color: #10b981;
-            font-weight: 700;
-            margin-right: 12px;
+            font-weight: 900;
+            margin-right: 15px;
         }
 
-        /* About */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-
-        .about-content p {
-            color: #4b5563;
-            font-size: 17px;
-            line-height: 1.8;
-            margin-bottom: 18px;
-        }
-
-        .about-content p:last-child {
-            margin-bottom: 0;
-        }
-
+        /* About Highlight */
         .about-highlight {
-            background: #eff6ff;
-            border-left: 4px solid #2563eb;
-            padding: 20px;
-            margin-top: 25px;
-            border-radius: 6px;
+            background: #eef2ff;
+            border-left: 5px solid #6366f1;
+            padding: 30px;
+            border-radius: 0 12px 12px 0;
         }
 
         .about-highlight p {
-            color: #1e40af;
-            font-weight: 500;
-            margin-bottom: 0;
+            color: #3730a3;
+            font-weight: 600;
         }
 
         /* FAQ */
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         .faq-item {
             background: white;
+            border: 1px solid #e2e8f0;
             padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-
-        .faq-item h3 {
-            font-size: 20px;
-            color: #111827;
-            margin-bottom: 12px;
-        }
-
-        .faq-item p {
-            color: #4b5563;
-            line-height: 1.7;
+            border-radius: 12px;
+            margin-bottom: 16px;
         }
 
         /* Final CTA */
         .final-cta {
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            background: #0f172a;
             color: white;
-            padding: 70px 0;
+            padding: 100px 0;
             text-align: center;
         }
 
-        .final-cta h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .final-cta p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
         .final-cta .email-link {
+            background: #6366f1;
             color: white;
-            font-size: 22px;
-            font-weight: 600;
-            background: rgba(255,255,255,0.2);
-            padding: 14px 30px;
-            border-radius: 8px;
+            padding: 20px 40px;
+            border-radius: 12px;
             display: inline-block;
-            transition: background 0.3s ease;
-        }
-
-        .final-cta .email-link:hover {
-            background: rgba(255,255,255,0.3);
+            margin-top: 20px;
+            font-size: 20px;
         }
 
         /* Footer */
         footer {
-            background-color: #111827;
-            color: #9ca3af;
-            padding: 40px 0;
+            background-color: #020617;
+            color: #94a3b8;
+            padding: 60px 0;
             text-align: center;
         }
 
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
-
         .footer-logo {
-            font-size: 22px;
-            font-weight: 700;
             color: white;
-            margin-bottom: 8px;
+            font-weight: 800;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
 
-        footer .email-link {
-            color: #60a5fa;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .section-subtitle {
-                font-size: 16px;
-            }
-
-            .header-content {
-                justify-content: center;
-                text-align: center;
-            }
-
-            .logo-container {
-                width: 100%;
-            }
-
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-card {
-                padding: 30px 20px;
-            }
-
-            .price-amount {
-                font-size: 42px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            section {
-                padding: 50px 0;
-            }
-
-            .hero {
-                padding: 60px 0;
-            }
-
-            .cta-button {
-                padding: 14px 30px;
-                font-size: 16px;
-            }
+            .hero h1 { font-size: 36px; }
+            .section-title { font-size: 30px; }
+            .services-list { padding: 30px; }
+            section { padding: 60px 0; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo-container">
-                    <div class="logo">TradeSiteSetup</div>
+                    <div class="logo">TradeSite<span>Setup</span></div>
                     <div class="tagline">Professional Websites for Local Businesses</div>
                 </div>
                 <div class="header-email">
@@ -558,7 +415,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Get a Professional Website for Your Local Business</h1>
@@ -567,12 +423,10 @@
         </div>
     </section>
 
-    <!-- Why a Website Matters -->
     <section>
         <div class="container">
             <h2 class="section-title">Why Your Business Needs a Website</h2>
             <p class="section-subtitle">In today's world, your website is often the first impression customers have of your business.</p>
-            
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">🌟</div>
@@ -593,39 +447,23 @@
         </div>
     </section>
 
-    <!-- Who This Is For -->
     <section class="section-alt">
         <div class="container">
             <h2 class="section-title">Who This Is For</h2>
             <p class="section-subtitle">TradeSiteSetup is built for local business owners who need a simple, professional online presence.</p>
-            
             <div class="target-list">
-                <div class="target-item">
-                    <h3>Local Service Businesses</h3>
-                    <p>Plumbers, electricians, HVAC, landscaping, and home services</p>
-                </div>
-                <div class="target-item">
-                    <h3>Contractors & Trades</h3>
-                    <p>General contractors, carpenters, painters, and builders</p>
-                </div>
-                <div class="target-item">
-                    <h3>Small Shops</h3>
-                    <p>Retail stores, salons, cafes, and local boutiques</p>
-                </div>
-                <div class="target-item">
-                    <h3>Professional Services</h3>
-                    <p>Consultants, accountants, attorneys, and local professionals</p>
-                </div>
+                <div class="target-item"><h3>Local Service Businesses</h3><p>Plumbers, electricians, HVAC, and home services</p></div>
+                <div class="target-item"><h3>Contractors & Trades</h3><p>General contractors, carpenters, painters, and builders</p></div>
+                <div class="target-item"><h3>Small Shops</h3><p>Retail stores, salons, cafes, and local boutiques</p></div>
+                <div class="target-item"><h3>Professional Services</h3><p>Consultants, accountants, and local professionals</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
     <section>
         <div class="container">
             <h2 class="section-title">What's Included</h2>
             <p class="section-subtitle">Everything you need for a professional online presence.</p>
-            
             <div class="services-list">
                 <div class="service-item">
                     <div class="service-check">✓</div>
@@ -648,63 +486,48 @@
                         <p>Home, About, Services, and Contact pages to cover all the essentials your customers need.</p>
                     </div>
                 </div>
-                <div class="service-item">
-                    <div class="service-check">✓</div>
-                    <div class="service-content">
-                        <h3>Easy-to-Use Layout</h3>
-                        <p>Clean, simple design that makes it easy for customers to find what they're looking for.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Process -->
     <section class="section-alt">
         <div class="container">
             <h2 class="section-title">Simple 3-Step Process</h2>
-            <p class="section-subtitle">Getting your website up and running is straightforward and hassle-free.</p>
-            
             <div class="process-steps">
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Reach Out</h3>
-                    <p>Send me an email telling me about your business and what you need from your website. I'll ask a few questions to make sure I understand your goals.</p>
+                    <p>Send me an email telling me about your business. I'll ask a few questions to make sure I understand your goals.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Review & Approve</h3>
-                    <p>I'll build your website and send it to you for review. You can request any changes or adjustments until you're completely happy with it.</p>
+                    <p>I'll build your website and send it to you for review. You can request changes until you're completely happy.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Payment & Launch</h3>
-                    <p>Once you approve the website, I'll send an invoice via Stripe by email. After payment is received, I'll publish your domain and your site goes live.</p>
+                    <p>Once you approve, I'll send a Stripe invoice. After payment, your domain and site go live immediately.</p>
                 </div>
             </div>
-
             <div class="payment-note">
                 <p>✓ No payment required upfront — you pay only after you've reviewed and approved your website.</p>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
     <section>
         <div class="container">
             <h2 class="section-title">Transparent Pricing</h2>
-            <p class="section-subtitle">Simple, straightforward pricing with no surprises.</p>
-            
             <div class="pricing-card">
                 <div class="price-tag">
                     <p class="price-starting">Website Setup Starting at</p>
                     <div class="price-amount">$300</div>
                 </div>
-                <ul class="pricing-details">
+                <ul class="pricing-details" style="list-style:none; margin-top:30px;">
                     <li>Professional website design and setup</li>
                     <li>Mobile-responsive layout</li>
                     <li>Core pages (Home, About, Services, Contact)</li>
-                    <li>Domain cost is a minimal yearly add-on</li>
                     <li>No monthly fees from TradeSiteSetup</li>
                     <li>Payment only after you approve your site</li>
                 </ul>
@@ -712,19 +535,11 @@
         </div>
     </section>
 
-    <!-- About -->
     <section class="section-alt">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <p class="section-subtitle">Hi, I'm Will, and I'm here to help your business grow online.</p>
-            
-            <div class="about-content">
-                <p>I'm based in Huntsville, Alabama, and I graduated from The University of Alabama in Huntsville, where I also played baseball. Outside of building websites, I'm passionate about sports, local business, and helping people succeed.</p>
-                
-                <p>I started TradeSiteSetup because I saw too many great local businesses struggling to get noticed online. They do excellent work, but without a professional website, potential customers couldn't find them or didn't take them seriously.</p>
-                
-                <p>I believe that building a website is the first step in growing a business. It's not just about having an online presence — it's about making it easier for customers to trust you, contact you, and choose you over the competition.</p>
-                
+            <div class="container" style="max-width:800px;">
+                <p style="margin-bottom:20px;">Hi, I'm Will, and I'm here to help your business grow online. Based in Huntsville, Alabama, I graduated from UAH where I also played baseball.</p>
                 <div class="about-highlight">
                     <p>My goal is simple: help local businesses look professional online without breaking the bank or dealing with complicated tech.</p>
                 </div>
@@ -732,51 +547,19 @@
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section>
-        <div class="container">
-            <h2 class="section-title">Common Questions</h2>
-            <p class="section-subtitle">Here are answers to some questions I hear most often.</p>
-            
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h3>How long does it take to build the site?</h3>
-                    <p>Most websites are completed within 1-2 weeks, depending on the complexity and how quickly you provide the information and materials I need (like photos, service descriptions, and business details).</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do I need technical experience?</h3>
-                    <p>Not at all. I handle everything from start to finish. You just need to provide information about your business, and I'll take care of the rest.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Are there monthly fees?</h3>
-                    <p>There are no monthly fees from TradeSiteSetup. You pay a one-time setup fee and a minimal yearly cost for your domain. Some businesses choose to add optional hosting or maintenance services, but that's entirely up to you.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What happens after my site is live?</h3>
-                    <p>Once your site is published, it's yours. You can request updates or changes anytime, and I'm available to help. Many clients reach out when they want to add new services, update content, or make seasonal changes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
             <h2>Ready to Get Started?</h2>
             <p>Send me an email and let's talk about your business and website needs.</p>
-            <a href="mailto:will@tradesitesetup.com?subject=Website Inquiry" class="email-link">will@tradesitesetup.com</a>
+            <a href="mailto:will@tradesitesetup.com" class="email-link">will@tradesitesetup.com</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">TradeSiteSetup</div>
-                <p><a href="mailto:will@tradesitesetup.com" class="email-link">will@tradesitesetup.com</a></p>
-                <p>Huntsville, Alabama</p>
-                <p>&copy; 2025 TradeSiteSetup. All rights reserved.</p>
-            </div>
+            <div class="footer-logo">TradeSite<span>Setup</span></div>
+            <p>Huntsville, Alabama</p>
+            <p>&copy; 2026 TradeSiteSetup. All rights reserved.</p>
         </div>
     </footer>
 </body>
